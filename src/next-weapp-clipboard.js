@@ -7,12 +7,18 @@
   var NxWeappClipboard = nx.declare('nx.WeappClipboard', {
     statics: {
       set: function(inValue, inOptions) {
-        wx.setClipboardData(
-          nx.mix({ data: inValue }, nxWxPromisify(resolve, reject), inOptions)
-        );
+        return new Promise(function(resolve, reject) {
+          wx.setClipboardData(
+            nx.mix({ data: inValue }, nxWxPromisify(resolve, reject), inOptions)
+          );
+        });
       },
       get: function(inOptions) {
-        wx.getClipboardData(nx.mix(nxWxPromisify(resolve, reject), inOptions));
+        return new Promise(function(resolve, reject) {
+          wx.getClipboardData(
+            nx.mix(nxWxPromisify(resolve, reject), inOptions)
+          );
+        });
       }
     }
   });
