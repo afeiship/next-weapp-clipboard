@@ -25,6 +25,3 @@ NxWeappClipboard.set('hello').then(response=>{
 
 NxWeappClipboard.get();
 ```
-
-## resources
-- https://github.com/afeiship
