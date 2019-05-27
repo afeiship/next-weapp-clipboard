@@ -9,8 +9,8 @@ npm install -S afeiship/next-weapp-clipboard --registry=https://registry.npm.tao
 ## apis
 | api | params           | description             |
 | --- | ---------------- | ----------------------- |
-| set | (inValue,inData) | Set data to clipboard   |
-| get | (inData)         | Get data from clipboard |
+| set | (inValue,inOptions) | Set data to clipboard   |
+| get | (inOptions)         | Get data from clipboard |
 
 ## usage
 ```js
